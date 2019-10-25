@@ -1,0 +1,15 @@
+.card {
+  padding: 20px;
+  margin-bottom: 40px;
+}
+.card-image {
+  height: 250px;
+  width: auto;
+}
+.producer-name {
+  color: #9782d3;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 20px;
+}

@@ -1,0 +1,29 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row fxLayout fxLayoutAlign="space-between">
+    <div fxLayout fxLayoutAlign="center center">
+      <button (click)="onToggleMenu()" mat-icon-button>
+        <mat-icon>menu</mat-icon>
+      </button>
+    </div>
+    <div fxLayout fxLayoutAlign="center center">
+      <div>
+        <button mat-icon-button>
+          <mat-icon matBadge="15" matBadgeColor="warn">notifications</mat-icon>
+        </button>
+      </div>
+      <div>
+        <button mat-button [matMenuTriggerFor]="beforeMenu">
+          <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="8px">
+            <mat-icon>account_circle</mat-icon>
+            <span>User 1</span>
+            <mat-icon>keyboard_arrow_down</mat-icon>
+          </div>
+        </button>
+        <mat-menu #beforeMenu="matMenu" xPosition="before">
+          <button mat-menu-item>Settings</button>
+          <button mat-menu-item>Logout</button>
+        </mat-menu>
+      </div>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>

@@ -1,0 +1,56 @@
+<mat-card class="signin-card" fxLayout="column" fxLayoutGap="15px">
+  <div class="card-img" fxLayot fxLayoutAlign="center">
+    <img src="assets/images/logo.png" alt="Photo of a Shiba Inu" />
+  </div>
+  <mat-card-title class="title-card" fxLayot fxLayoutAlign="center"
+    ><h1>Sing In</h1></mat-card-title
+  >
+  <form fxLayout="column" fxLayoutGap="15px" #form="ngForm">
+    <mat-form-field>
+      <input
+        matInput
+        placeholder="User name"
+        ngModel
+        name="username"
+        #usernameInput="ngModel"
+        required
+      />
+      <mat-icon color="primary" matSuffix>perm_identity</mat-icon>
+      <mat-error *ngIf="usernameInput.hasError('required')"
+        >Field must not be empty</mat-error
+      >
+    </mat-form-field>
+
+    <mat-form-field hintLabel="Should be at least 6 characters long.">
+      <input
+        type="password"
+        matInput
+        placeholder="Your password"
+        ngModel
+        name="password"
+        required
+        minlength="6"
+        #passwordInput="ngModel"
+      />
+      <mat-icon color="primary" matSuffix>vpn_key</mat-icon>
+      <mat-hint align="end">{{ passwordInput.value?.length }} / 6</mat-hint>
+      <mat-error>Has to be at lest 6 characters long.</mat-error>
+    </mat-form-field>
+
+    <button
+      class="btn"
+      type="submit"
+      [disabled]="form.invalid"
+      mat-flat-button
+      color="primary"
+    >
+      <mat-spinner
+        *ngIf="false"
+        color="accent"
+        class="btn-spinner"
+        [diameter]="40"
+      ></mat-spinner>
+      <span *ngIf="true">Login</span>
+    </button>
+  </form>
+</mat-card>

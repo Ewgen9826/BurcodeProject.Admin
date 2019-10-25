@@ -1,0 +1,43 @@
+<div class="container" fxLayout="row wrap" fxLayoutGap.gt-xs="40px">
+  <form class="filter-words">
+    <div fxLayout fxLayoutAlign="center center" fxLayoutGap="15px">
+      <mat-icon color="primary">search</mat-icon>
+      <mat-form-field fxFlex.gt-md="400px" class="form-field">
+        <input matInput type="text" placeholder="Search by name, producer name" />
+        <button
+          mat-button
+          matSuffix
+          mat-icon-button
+          aria-label="Clear"
+          (click)="value = ''"
+        >
+          <mat-icon>close</mat-icon>
+        </button>
+      </mat-form-field>
+    </div>
+  </form>
+
+  <form
+    class="filter-date"
+    fxLayout="row wrap"
+    fxLayoutAlign="flex-start center"
+    fxLayoutGap="15px"
+  >
+    <span>Create date:</span>
+
+    <mat-form-field>
+      <input matInput [matDatepicker]="fromPicker" placeholder="From" />
+      <mat-datepicker-toggle
+        matSuffix
+        [for]="fromPicker"
+      ></mat-datepicker-toggle>
+      <mat-datepicker #fromPicker></mat-datepicker>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput [matDatepicker]="toPicker" placeholder="To" />
+      <mat-datepicker-toggle matSuffix [for]="toPicker"></mat-datepicker-toggle>
+      <mat-datepicker #toPicker></mat-datepicker>
+    </mat-form-field>
+  </form>
+</div>

@@ -1,0 +1,39 @@
+:host {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.signin-card {
+  padding: 30px;
+  width: 450px;
+}
+mat-form-field {
+  font-size: 22px;
+}
+.btn {
+  width: 100%;
+  padding: 10px;
+  font-size: 22px;
+}
+@media (max-width: 599px) {
+  :host {
+    width: 100%;
+    justify-content: stretch;
+    align-items: stretch;
+  }
+  .signin-card{
+    width: 100%;
+  }
+  mat-form-field {
+    font-size: 18px;
+  }
+  .btn {
+    font-size: 18px;
+    padding: 5px;
+  }
+  .title-card {
+    font-size: 22px;
+  }
+}

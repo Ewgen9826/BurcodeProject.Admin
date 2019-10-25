@@ -1,0 +1,29 @@
+<mat-card fxFlex.gt-xs="340px" fxFlex="300px" class="card">
+  <div fxLayout fxLayoutAlign="center center">
+    <img class="card-image" mat-card-image src="assets/images/protein.png" />
+  </div>
+
+  <mat-card-content>
+    <div fxLayout>
+      <span class="producer-name">{{ product.producerName }}</span>
+    </div>
+    <div fxLayout>
+      <h2>{{ product.name }}</h2>
+    </div>
+  </mat-card-content>
+
+  <mat-card-actions fxLayout fxLayoutAlign="space-between">
+    <button mat-button>
+      <div fxLayout fxLayoutAlign="center center" fxLayoutGap="10px">
+        <span>Edit</span>
+        <mat-icon>edit</mat-icon>
+      </div>
+    </button>
+    <button color="warn" mat-button>
+      <div fxLayout fxLayoutAlign="center center" fxLayoutGap="10px">
+        <span>Delete</span>
+        <mat-icon>delete</mat-icon>
+      </div>
+    </button>
+  </mat-card-actions>
+</mat-card>

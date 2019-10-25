@@ -1,0 +1,9 @@
+.container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 300px;
+  box-shadow: 0 0px 10px -8px rgba(115, 115, 115, 0.75),
+    0px 0 10px -8px rgba(115, 115, 115, 0.75);
+}

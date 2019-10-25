@@ -1,0 +1,14 @@
+.container {
+  margin-bottom: 40px;
+  min-height: 200px;
+}
+.container button {
+  background: #f0f0f0;
+  width: 100%;
+}
+.container button span {
+  font-size: 20px;
+}
+.container button mat-icon {
+  font-size: 50px;
+}

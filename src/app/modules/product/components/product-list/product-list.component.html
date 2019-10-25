@@ -1,0 +1,12 @@
+<div
+  fxLayout="row wrap"
+  fxLayoutAlign.lt-xl="center stretch "
+  fxLayoutGap.gt-xs="40px"
+  class="container"
+>
+  <app-product-item-add></app-product-item-add>
+  <app-product-item
+    *ngFor="let product of products"
+    [product]="product"
+  ></app-product-item>
+</div>
